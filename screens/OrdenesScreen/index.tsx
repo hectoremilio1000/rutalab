@@ -40,7 +40,9 @@ const OrdenesScreen = ()=>{
             <View style={styles.subcontainer2}>
                 <Text style={styles.textcurso}>Orden en curso</Text>
                 <View style={styles.subcontainer2_1}>
-                    <ProductImage/>
+                <Image 
+                    source={{uri:'http://rutalab.com/imagenes/productos/Biometria_hematica.jpg'}}
+                    style={styles.imageproducto}/>
                     <View style={styles.subcontainer2_1_1}>
                     <Text style={styles.prueba}>Prueba COVID</Text>  
                     <Text style={styles.fecha}>18-10-21</Text>  

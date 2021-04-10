@@ -14,6 +14,10 @@ import HelpScreen from '../screens/HelpScreen';
 import OrdenesScreen from '../screens/OrdenesScreen'
 
 import { BottomTabParamList, HomeNavigatorParamList, TabTwoParamList } from '../types';
+import DestinationSearchScreen from '../screens/DestinationSearch/index';
+import CreandoOrdenScreen from '../screens/CreandoOrdenScreen/index';
+import OrdenEstadoScreen from '../screens/OrdenEstadosScreen'
+import RouteMapComponent from '../components/RouteMap/index';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -46,7 +50,7 @@ export default function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="List"
-        component={OrdenesScreen}
+        component={RouteMapComponent}
         
         options={{
           tabBarIcon: ({ color }) => <FontAwesome name="list-alt" size={30} color={color} />,
@@ -54,14 +58,14 @@ export default function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="Help"
-        component={HelpScreen}
+        component={OrdenEstadoScreen}
         options={{
           tabBarIcon: ({ color }) => <MaterialIcons name="support-agent" size={30} color={color} />,
         }}
       />
       <BottomTab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={DestinationSearchScreen}
         options={{
           tabBarIcon: ({ color }) => <MaterialIcons name="tag-faces" size={28} color={color} />,
         }}

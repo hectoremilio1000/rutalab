@@ -1,18 +1,16 @@
 import React from 'react'
-import { Text, View, SafeAreaView, Image } from 'react-native'
+import { Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import {Entypo, Feather, AntDesign} from '@expo/vector-icons'
 import Colors from '../../constants/Colors'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 import styles from './styles'
 import ProductImage from '../../components/Products/Product/ProductImage'
 
-const image = require('../../assets/images/mastercard.jpg')
+const image_tarjeta = require('../../assets/images/mastercard.jpg')
 
-export type ServicesScreentypes = {
-image:string
-}
 
 const ServicesScreen = () =>{
+
+    
 
     const onPressPropina= ()=>{
         console.warn('Click en propina')
@@ -45,7 +43,7 @@ const ServicesScreen = () =>{
                 <Text style={styles.metodos}>Métodos de pago</Text>
                 <TouchableOpacity>
                     <View style={styles.subcontainer2_1}>
-                        <Image source={image} style={styles.imagenmaster}/>
+                        <Image source={image_tarjeta} style={styles.imagenmaster}/>
                         <Text style={styles.terminacion}>0646</Text>
                     </View>
                 </TouchableOpacity>
@@ -53,12 +51,15 @@ const ServicesScreen = () =>{
 
             <View style={styles.container3}>
                 <View style={styles.container3_1}> 
-                    <Text style={styles.prueba}>Prueba de embarazo</Text>
-                    <Text style={styles.precio}>MX$349</Text>
+                    
+                    <Text style={styles.prueba}>Biometría hemática</Text>
+                    <Text style={styles.precio}>$1300</Text>
                 </View>
 
                 <View style={styles.container3_2}>
-                    <ProductImage/>
+                <Image 
+                    source={{uri:'http://rutalab.com/imagenes/productos/Biometria_hematica.jpg'}}
+                    style={styles.imageproducto}/>
                     <TouchableOpacity onPress={onPressTrash}>
                         <Feather name="trash-2" size={30} color={Colors.dark.tint}/>
                     </TouchableOpacity>

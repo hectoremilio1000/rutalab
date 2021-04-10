@@ -86,6 +86,12 @@ const styles = StyleSheet.create({
     subcontainer4:{
 
     },
+
+    imageproducto:{
+        width:150,
+        height:120,
+        borderRadius:10,
+    },
     button:{
         backgroundColor:'#022180',
         borderRadius:5,

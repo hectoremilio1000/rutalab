@@ -113,6 +113,13 @@ const styles = StyleSheet.create({
     iconrowright:{
         fontWeight:"900",
     },
+
+    imageproducto:{
+        width:150,
+        height:120,
+        borderRadius:10,
+    },
+
     subcontainer3_4:{
         marginVertical:40,
         flexDirection:'row',

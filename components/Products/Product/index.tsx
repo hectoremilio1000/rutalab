@@ -37,7 +37,7 @@ const Product = (props:ProductProps) => {
             <View style={styles.subcontainer2}>
                 <Text style={styles.text1}>{productName}</Text>
                 <Text style={styles.text2}>Tiempo de resultado {tiempoResultado} min</Text>
-                <Text>{price}</Text>
+                <Text>${price}</Text>
                 <TouchableOpacity
                 onPress={onPressLearnMore}
                 style={styles.button}>
